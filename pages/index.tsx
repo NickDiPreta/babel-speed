@@ -60,11 +60,7 @@ const Home = (): JSX.Element => {
         <main>
           <style jsx>{main}</style>
 
-          <HomepageNav
-            setButton={setButton}
-            handleClick={handleClick}
-
-          />
+          <HomepageNav setButton={setButton} handleClick={handleClick} />
           {dropdown ? (
             <div className="dropmenu-home">
               <ul className="options-dropdown">

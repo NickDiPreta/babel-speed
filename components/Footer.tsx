@@ -90,6 +90,9 @@ export const Footer: React.FC<FooterProps> = ({}) => {
             margin-top: 10px;
           }
         }
+        span {
+          cursor: pointer;
+        }
         .footer-links {
           display: flex;
           width: 35%;
@@ -109,6 +112,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
             height: 19px;
             width: 19px;
             margin-bottom: 22px;
+            cursor: pointer;
           }
         }
         .icons-list {
