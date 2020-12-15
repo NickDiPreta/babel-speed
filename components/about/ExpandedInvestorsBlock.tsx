@@ -53,8 +53,6 @@ export const ExpandedInvestorsBlock: React.FC<ExpandedInvestorsBlockProps> = ({}
         <div>
           <img src="/static/investor-icons/mvp_logo.png" />
         </div>
-       
-        
       </ul>
       <style jsx>{`
         ul {

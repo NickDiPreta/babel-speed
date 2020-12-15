@@ -93,8 +93,10 @@ export const main = css`
   }
 
   .SFF-Block {
-    height: 450px;
-    padding-top: 50px;
+    height: 598px;
+    margin-left: -100px;
+    margin-right: -105px;
+    padding-top: 147px;
     span {
       font-size: 42px;
       color: #212121;
@@ -103,8 +105,9 @@ export const main = css`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: #f9f8ff;
+    background: linear-gradient(rgba(240, 237, 255, 0.25), white);
   }
+
   .button-container {
     display: none;
   }
