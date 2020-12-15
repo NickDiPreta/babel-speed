@@ -6,8 +6,13 @@ interface FooterProps {}
 export const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <div className="footer-container">
-      <div className="footer-logo">
-        <img src="/static/perchlogo.svg" />
+      <div className="footer-left">
+        <div className="footer-logo">
+          <img src="/static/perchlogo.svg" />
+        </div>
+        <div className="bottom">
+          © 2020 Perch Credit, Inc. All rights reserved.
+        </div>
       </div>
       <div className="footer-links">
         <ul>
@@ -33,32 +38,46 @@ export const Footer: React.FC<FooterProps> = ({}) => {
         </ul>
         <ul className="social-icons">
           Social
-          <Link href="https://www.facebook.com/perchcredit">
-            <img src="/static/social-icons/facebook-icon.png" />
-          </Link>
-          <Link href="https://twitter.com/perchcredit/perchcredit">
-            <img src="/static/social-icons/twitter.png" />
-          </Link>
-          <Link href="https://www.linkedin.com/company/perch-credit">
-            <img src="/static/social-icons/linkedin.png" />
-          </Link>
-          <Link href="https://www.instagram.com/perch.credit/">
-            <img src="/static/social-icons/instagram.png" />
-          </Link>
+          <ul className="icons-list">
+            <Link href="https://www.facebook.com/perchcredit">
+              <img src="/static/social-icons/facebook-icon.png" />
+            </Link>
+            <Link href="https://twitter.com/perchcredit/perchcredit">
+              <img src="/static/social-icons/twitter.png" />
+            </Link>
+            <Link href="https://www.linkedin.com/company/perch-credit">
+              <img src="/static/social-icons/linkedin.png" />
+            </Link>
+            <Link href="https://www.instagram.com/perch.credit/">
+              <img src="/static/social-icons/instagram.png" />
+            </Link>
+          </ul>
         </ul>
       </div>
       <style jsx>{`
         .footer-container {
-          border-top: 1px solid gray;
-          max-height: 616px;
+          max-height: auto;
           display: flex;
           background: #f9f8ff;
           width: 100vw;
           margin-left: -100px;
+          padding-top: 79px;
           padding-left: 100px;
-          padding-right: 100px;
-          padding-top: 100px;
+          padding-right: 202px;
+          padding-bottom: 55px;
           justify-content: space-between;
+        }
+        .bottom {
+          position: absolute;
+          align-self: flex-end;
+          font-size: 12px;
+          color: #aeacb8;
+        }
+        .footer-left {
+          min-height: max;
+          width: auto;
+          display: flex;
+          align-content: flex-start;
         }
         .footer-logo {
           height: 100px;
@@ -67,10 +86,13 @@ export const Footer: React.FC<FooterProps> = ({}) => {
         ul {
           display: flex;
           flex-direction: column;
+          span {
+            margin-top: 10px;
+          }
         }
         .footer-links {
           display: flex;
-          width: 50%;
+          width: 35%;
           justify-content: space-between;
         }
         .footer-links > ul {
@@ -86,7 +108,14 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           img {
             height: 19px;
             width: 19px;
+            margin-bottom: 22px;
           }
+        }
+        .icons-list {
+          justify-content: flex-start;
+          margin-top: 5px;
+          padding-top: 10px;
+          padding-left: 0px;
         }
         @media only screen and (max-width: 600px) {
           .footer-container {
