@@ -19,28 +19,32 @@ export const AdjectiveBlock = () => {
         title="Free"
         subtitle="We believe credit building shouldn’t cost you."
       />
-      <style jsx>{`
-        @media only screen and (max-width: 600px) {
-          .adj-container {
-            height: 691px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 57px;
+      <style jsx>
+        {' '}
+        {`
+          @media only screen and (max-width: 600px) {
+            .adj-container {
+              height: 691px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin-top: 57px;
+            }
           }
-        }
-        @media only screen and (min-width: 600px) {
-          .adj-container {
-            height: 30vh;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 5vh;
+          @media only screen and (min-width: 600px) {
+            .adj-container {
+              width: 100%;
+              height: 30vh;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 5vh;
+            }
           }
-        }
-      `}</style>
+        `}
+      </style>
     </div>
   )
 }

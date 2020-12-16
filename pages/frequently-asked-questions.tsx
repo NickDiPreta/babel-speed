@@ -8,12 +8,6 @@ import { main } from '../styles/home'
 interface faqProps {}
 
 const faq: React.FC<faqProps> = ({}) => {
-  useEffect(() => {
-    window.addEventListener('resize', setDesktop(window.innerWidth > 600))
-    return () =>
-      window.removeEventListener('resize', setDesktop(window.innerWidth > 600))
-  })
-
   const [show, setShow] = useState(true)
   const [dropdown, setDropdown] = useState(false)
   const [button, setButton] = useState(false)

@@ -17,7 +17,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
           <Link href="/about">About</Link>
         </span>
         <span>
-          <Link href="/faq">FAQ</Link>
+          <Link href="/frequently-asked-questions">FAQ</Link>
         </span>
         <Link href="/signup">
           <button>Get Started</button>

@@ -10,9 +10,6 @@ export const Footer: React.FC<FooterProps> = ({}) => {
         <div className="footer-logo">
           <img src="/static/perchlogo.svg" />
         </div>
-        <div className="bottom">
-          © 2020 Perch Credit, Inc. All rights reserved.
-        </div>
       </div>
       <div className="footer-links">
         <ul>
@@ -53,6 +50,9 @@ export const Footer: React.FC<FooterProps> = ({}) => {
             </Link>
           </ul>
         </ul>
+        <div className="bottom">
+          © 2020 Perch Credit, Inc. All rights reserved.
+        </div>
       </div>
       <style jsx>{`
         .footer-container {
@@ -133,7 +133,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           .footer-links > ul {
             padding-top: 20px;
             font-size: 13px;
-            line-height: 15px;
+            line-height: 21px;
           }
           .footer-links {
             display: flex;
@@ -151,17 +151,26 @@ export const Footer: React.FC<FooterProps> = ({}) => {
             margin: 0px;
           }
           .social-icons {
-            margin-left: -22px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
+            img {
+              margin-right: 18px;
+            }
           }
           ul {
             height: 129px;
+            display: flex;
+            flex-direction: column;
           }
           span {
             margin-top: 15px;
+          }
+          .bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+          .icons-list {
+            flex-direction: row;
+            align-items: center;
           }
         }
       `}</style>

@@ -2,8 +2,8 @@ import { AnimatePresence, useCycle } from 'framer-motion'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { AdjectiveBlock } from '../components/AdjectiveBlock'
-import { BlockFourDesktop } from '../components/BlockFourDesktop'
-import { BlockFourMobile } from '../components/BlockFourMobile'
+
+import { BlockFour } from '../components/BlockFour'
 import { FeaturedIn } from '../components/FeaturedIn'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
@@ -17,12 +17,6 @@ import { Subtitle } from '../components/Subtitle'
 import { main } from '../styles/home'
 
 const Home = (): JSX.Element => {
-  useEffect(() => {
-    window.addEventListener('resize', setDesktop(window.innerWidth > 600))
-    return () =>
-      window.removeEventListener('resize', setDesktop(window.innerWidth > 600))
-  })
-
   const metaTitle = 'Perch Credit'
   const [text, cycleText] = useCycle(
     'Rent',
@@ -51,6 +45,9 @@ const Home = (): JSX.Element => {
 
   useEffect(() => {
     handleCycle()
+    return () => {
+      console.log('cleanup')
+    }
   }, [])
 
   return (
@@ -79,7 +76,7 @@ const Home = (): JSX.Element => {
                 <Link href="/about">
                   <li className="pointer">About</li>
                 </Link>
-                <Link href="faq">
+                <Link href="frequently-asked-questions">
                   <li className="pointer">FAQ</li>
                 </Link>
                 <li className="drop-menu pointer">
@@ -165,7 +162,7 @@ const Home = (): JSX.Element => {
               </div>
             </div>
 
-            {isDesktop ? <BlockFourDesktop /> : <BlockFourMobile />}
+            <BlockFour />
           </div>
           <InvestorsBlock />
           <div className="SFF-Block">

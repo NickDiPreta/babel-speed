@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Logo } from '../Logo'
 import Link from 'next/link'
-import Image from 'next/image'
 
 interface MobileNavProps {
   handleClick: () => void
@@ -13,45 +12,39 @@ export const HomepageNav: React.FC<MobileNavProps> = ({
   handleClick,
   setButton,
 }) => {
-  const [lastScroll, setLastScroll] = useState(-5)
-  const [navbar, setNavbar] = useState(false)
+  // const [lastScroll, setLastScroll] = useState(-5)
+  // const [navbar, setNavbar] = useState(false)
 
-  // window.addEventListener('resize', showButton)
+  // // window.addEventListener('resize', showButton)
 
-  useEffect(() => {
-    window.addEventListener('scroll', changeBackground)
-  })
+  // useEffect(() => {
+  //   window.addEventListener('scroll', changeBackground)
+  // })
 
-  const changeBackground = () => {
-    if (scrollY > lastScroll && scrollY > 50) {
-      setNavbar(true)
-      setButton(true)
-    }
-    if (scrollY < lastScroll) {
-      setNavbar(false)
-      setButton(false)
-    }
-    setLastScroll(scrollY)
-    if (scrollY > 1500) {
-      setButton(false)
-    }
-  }
+  // const changeBackground = () => {
+  //   if (scrollY > lastScroll && scrollY > 50) {
+  //     setNavbar(true)
+  //     setButton(true)
+  //   }
+  //   if (scrollY < lastScroll) {
+  //     setNavbar(false)
+  //     setButton(false)
+  //   }
+  //   setLastScroll(scrollY)
+  //   if (scrollY > 1500) {
+  //     setButton(false)
+  //   }
+  // }
 
   return (
     <>
-      <nav className={navbar ? 'active' : ''}>
+      <nav>
         <div className="hamburger-container">
           <div className="nav-left">
             <div className="nav-logo pointer">
               <Link href="/">
                 <span className="pointer">
-                  <Image
-                    src="/static/perchlogo.svg"
-                    alt="Perch Logo"
-                    priority={true}
-                    height={24}
-                    width={87}
-                  />
+                  <Logo />
                 </span>
               </Link>
             </div>
