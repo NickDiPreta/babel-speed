@@ -20,7 +20,6 @@ export const AdjectiveBlock = () => {
         subtitle="We believe credit building shouldn’t cost you."
       />
       <style jsx>
-        {' '}
         {`
           @media only screen and (max-width: 600px) {
             .adj-container {
